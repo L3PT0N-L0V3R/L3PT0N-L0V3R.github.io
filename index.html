@@ -82,6 +82,30 @@
     .small{font-size:.875rem; color:var(--muted)}
 
     .section-title{margin:8px 0 6px; font-size:1.1rem; font-weight:800; letter-spacing:.02em; color:#dbe7ff}
+
+    /* Thank-you popup */
+    #thankyou {
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.65);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:1000;
+    }
+    #thankyou .box {
+      background:#111833;
+      border:1px solid #2b3567;
+      border-radius:16px;
+      padding:2rem;
+      max-width:420px;
+      width:calc(100% - 32px);
+      text-align:center;
+      color:var(--ink);
+      box-shadow:0 20px 60px rgba(0,0,0,.4);
+    }
+    #thankyou .box h3 {margin:.25rem 0 0}
+    #thankyou .box p {color:var(--muted); margin:.5rem 0 1rem}
   </style>
 </head>
 <body>
@@ -201,8 +225,52 @@
     </div>
   </footer>
 
+  <!-- Thank you popup -->
+  <div id="thankyou" role="dialog" aria-modal="true" aria-labelledby="ty-title" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.65); align-items:center; justify-content:center; z-index:1000;">
+    <div class="box" style="background:#111833; border:1px solid #2b3567; border-radius:16px; padding:2rem; max-width:420px; width:calc(100% - 32px); text-align:center; color:#e6f0ff; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+      <h3 id="ty-title" style="margin:.25rem 0 0">✅ Thank you!</h3>
+      <p style="color:#a9b7d0; margin:.5rem 0 1rem">Your message has been sent. I’ll reply soon.</p>
+      <button class="btn" id="ty-close" type="button">Close</button>
+    </div>
+  </div>
+
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('contact-form');
+    const thankyou = document.getElementById('thankyou');
+    const closeBtn = document.getElementById('ty-close');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const resp = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (resp.ok) {
+          form.reset();
+          thankyou.style.display = 'flex';
+          // Optional: auto-close after 4s
+          setTimeout(() => { thankyou.style.display = 'none'; }, 4000);
+        } else {
+          alert("Oops! Something went wrong. Please email me directly: dammonbowen1996@gmail.com");
+        }
+      } catch (err) {
+        alert("Network error. Please email me directly: dammonbowen1996@gmail.com");
+      }
+    });
+
+    closeBtn.addEventListener('click', () => {
+      thankyou.style.display = 'none';
+    });
+
+    // Close popup when clicking the backdrop
+    thankyou.addEventListener('click', (e) => {
+      if (e.target === thankyou) thankyou.style.display = 'none';
+    });
   </script>
 </body>
 </html>
