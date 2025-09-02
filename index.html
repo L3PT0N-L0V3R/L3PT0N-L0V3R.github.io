@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dammon Bowen — Math Tutor</title>
-  <meta name="description" content="Affordable one-on-one math tutoring from Algebra through Precalculus/Trig (and Calc I readiness). Online or in Portland, OR." />
+  <meta name="description" content="Friendly one-on-one math tutoring from Algebra through Precalculus/Trig—with a strong emphasis on preparing for Calculus. Online or in Portland, OR." />
   <meta name="robots" content="index,follow" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Dammon Bowen — Math Tutor" />
-  <meta property="og:description" content="Affordable one-on-one math tutoring from Algebra through Precalculus/Trig (and Calc I readiness). Online or in Portland, OR." />
+  <meta property="og:description" content="Friendly one-on-one math tutoring from Algebra through Precalculus/Trig—with a strong emphasis on preparing for Calculus. Online or in Portland, OR." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://l3pt0n-l0v3r.github.io/og.png" />
   <meta property="og:url" content="https://l3pt0n-l0v3r.github.io/" />
@@ -22,7 +22,7 @@
     "@type":"LocalBusiness",
     "name":"Dammon Bowen Math Tutoring",
     "image":"https://l3pt0n-l0v3r.github.io/og.png",
-    "description":"One-on-one math tutoring from Algebra through Precalculus/Trig (and Calc I readiness). Remote or in Portland, OR.",
+    "description":"One-on-one math tutoring from Algebra through Precalculus/Trig—with a strong emphasis on preparing for Calculus. Remote or in Portland, OR.",
     "areaServed":"US",
     "telephone":"+1-971-297-7434",
     "email":"dammonbowen1996@gmail.com",
@@ -35,77 +35,109 @@
 
   <style>
     :root{
-      --bg:#0b1020;
-      --card:#111833;
-      --ink:#e6f0ff;
-      --muted:#a9b7d0;
-      --accent:#64e6b2;
-      --accent-2:#7aa2ff;
-      --ring: 0 0 0 .125rem color-mix(in oklab, var(--accent) 40%, transparent);
+      /* Light, inviting palette */
+      --bg:#f6f8fb;          /* page background */
+      --ink:#0f172a;         /* primary text (slate-900) */
+      --muted:#475569;       /* secondary text (slate-600) */
+      --card:#ffffff;        /* cards */
+      --line:#e2e8f0;        /* borders (slate-200) */
+      --accent:#2563eb;      /* primary (blue-600) */
+      --accent-2:#22c55e;    /* secondary (green-500) */
+      --ring:0 0 0 .14rem rgba(37, 99, 235, .35);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; font:16px/1.6 system-ui, sans-serif;
-      color:var(--ink); background: radial-gradient(1200px 600px at 70% -10%, #1b2450 0, transparent 70%), var(--bg);
+      margin:0;
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Noto Sans", Arial, sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 70% -10%, #eaf2ff 0, transparent 70%),
+        linear-gradient(#ffffff, var(--bg));
       display:flex; flex-direction:column;
     }
     a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:980px; padding:24px; width:100%; margin-inline:auto}
-    header{position:sticky; top:0; backdrop-filter:saturate(1.2) blur(12px); background:#0b1020c0; border-bottom:1px solid #202848}
+
+    header{
+      position:sticky; top:0;
+      backdrop-filter:saturate(1.2) blur(10px);
+      background:#ffffffcc;
+      border-bottom:1px solid var(--line);
+    }
     .nav{display:flex; gap:18px; align-items:center; justify-content:space-between}
     .brand{display:flex; gap:12px; align-items:center}
-    .badge{width:36px; height:36px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#00111a; font-weight:800}
+    .badge{
+      width:36px; height:36px; display:grid; place-items:center; border-radius:10px;
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#ffffff; font-weight:800; box-shadow:0 6px 18px rgba(37,99,235,.25);
+    }
     .brand h1{font-size:18px; margin:0}
-    .cta{display:flex; gap:10px; align-items:center}
-    .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border-radius:12px; background:var(--accent); color:#02110d; font-weight:700; border:0; box-shadow:0 4px 20px color-mix(in oklab, var(--accent) 25%, transparent); cursor:pointer}
-    .btn.alt{background:#1b2450; color:var(--ink); border:1px solid #2b3567}
-    .btn:focus-visible{outline: none; box-shadow: var(--ring)}
 
-    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; padding:42px 0}
+    .cta{display:flex; gap:10px; align-items:center}
+    .btn{
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.72rem 1rem; border-radius:12px; border:1px solid transparent; cursor:pointer;
+      background:var(--accent); color:#fff; font-weight:700;
+      box-shadow:0 8px 24px rgba(37,99,235,.22);
+    }
+    .btn.alt{
+      background:#fff; color:var(--ink); border:1px solid var(--line);
+      box-shadow:0 2px 8px rgba(15,23,42,.04);
+    }
+    .btn:focus-visible{outline:none; box-shadow:var(--ring)}
+
+    .hero{
+      display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; padding:42px 0;
+    }
     .hero h2{font-size:clamp(28px, 4vw, 44px); line-height:1.15; margin:0 0 10px}
     .lead{color:var(--muted); margin:0 0 18px}
-    .card{background:linear-gradient(180deg, #121a36, #0d142b); border:1px solid #1f2a59; border-radius:16px; padding:18px}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px; padding:18px;
+      box-shadow:0 8px 30px rgba(2,6,23,.06);
+    }
     .grid{display:grid; gap:16px}
     .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
     .grid.cols-2{grid-template-columns:repeat(2, 1fr)}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+    }
 
-    .pill{display:inline-block; padding:.35rem .6rem; border-radius:999px; background:#15214a; color:#cfe0ff; border:1px solid #233067; font-size:.85rem}
+    .pill{
+      display:inline-block; padding:.35rem .6rem; border-radius:999px;
+      background:#eef2ff; color:#1e3a8a; border:1px solid #dbeafe; font-size:.85rem
+    }
     ul.clean{list-style:none; padding:0; margin:0}
     ul.clean li{display:flex; gap:.6rem; align-items:flex-start}
-    .dot{width:.66rem; height:.66rem; margin-top:.5rem; border-radius:50%; background:var(--accent)}
+    .dot{
+      width:.66rem; height:.66rem; margin-top:.5rem; border-radius:50%; background:var(--accent)
+    }
 
-    .footer{color:#9fb0d4; border-top:1px solid #1e2751; margin-top:auto}
+    .section-title{margin:8px 0 6px; font-size:1.1rem; font-weight:800; letter-spacing:.02em; color:#0b1220}
+    .small{font-size:.95rem; color:var(--muted)}
+
+    .footer{color:var(--muted); border-top:1px solid var(--line); margin-top:auto}
     .footer .wrap{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px}
-    .small{font-size:.875rem; color:var(--muted)}
 
-    .section-title{margin:8px 0 6px; font-size:1.1rem; font-weight:800; letter-spacing:.02em; color:#dbe7ff}
-
-    /* Thank-you popup */
+    /* Thank-you popup (unchanged logic) */
     #thankyou {
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.65);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      z-index:1000;
+      position:fixed; inset:0; background:rgba(0,0,0,0.45);
+      display:none; align-items:center; justify-content:center; z-index:1000;
     }
-    #thankyou .box {
-      background:#111833;
-      border:1px solid #2b3567;
-      border-radius:16px;
-      padding:2rem;
-      max-width:420px;
-      width:calc(100% - 32px);
-      text-align:center;
-      color:var(--ink);
-      box-shadow:0 20px 60px rgba(0,0,0,.4);
+    #thankyou .box{
+      background:#ffffff; color:var(--ink);
+      border:1px solid var(--line); border-radius:16px; padding:2rem;
+      max-width:420px; width:calc(100% - 32px); text-align:center;
+      box-shadow:0 24px 70px rgba(2,6,23,.18);
     }
-    #thankyou .box h3 {margin:.25rem 0 0}
-    #thankyou .box p {color:var(--muted); margin:.5rem 0 1rem}
+    #thankyou .box h3{margin:.25rem 0 0}
+    #thankyou .box p{color:var(--muted); margin:.5rem 0 1rem}
   </style>
 </head>
 <body>
@@ -128,8 +160,8 @@
   <main class="wrap">
     <section class="hero">
       <div>
-        <h2>One-on-one <em>math</em> tutoring from Algebra through Precalculus/Trig.</h2>
-        <p class="lead">No memorizing tricks—just understanding. I offer online sessions anywhere and in-person tutoring in Portland, OR.</p>
+        <h2>Math tutoring from <em>Algebra I</em> through <em>Precalculus/Trigonometry</em>—with a strong focus on <em>Calculus readiness</em>.</h2>
+        <p class="lead">Concept-first help that builds real understanding. Sessions online anywhere, or in-person in Portland, OR.</p>
         <div class="cta">
           <a class="btn" href="#contact">Get in touch</a>
           <a class="btn alt" href="#subjects">See topics</a>
@@ -163,8 +195,8 @@
         <div class="small">Unit circle, identities, equations, graphs, applications</div>
       </article>
       <article class="card">
-        <div class="section-title">Calc I Readiness</div>
-        <div class="small">Limits, rate of change intuition, derivative basics</div>
+        <div class="section-title">Calc Readiness</div>
+        <div class="small">Limits, rate-of-change intuition, derivative basics (pre-Calc)</div>
       </article>
     </section>
 
@@ -172,10 +204,10 @@
       <article class="card">
         <div class="section-title">Popular topics</div>
         <ul class="clean" style="margin-top:8px; display:grid; gap:8px">
-          <li><span class="dot"></span><div>Functions (domain/range, transformations, composition)</div></li>
+          <li><span class="dot"></span><div>Function sense-making (domain/range, transformations, composition)</div></li>
           <li><span class="dot"></span><div>Trigonometry (unit circle, identities, solving triangles)</div></li>
           <li><span class="dot"></span><div>Precalculus (logs/exp, sequences/series, vectors & parametrics)</div></li>
-          <li><span class="dot"></span><div>Calc I foundations (limits, slope as rate of change, derivative basics)</div></li>
+          <li><span class="dot"></span><div><strong>Calculus preparation</strong> (limits, slope as rate of change, derivative intuition)</div></li>
         </ul>
       </article>
       <article class="card">
@@ -187,8 +219,8 @@
 
     <section id="about" style="margin-top:24px" class="card">
       <div class="section-title">About me</div>
-      <p class="small">I’m a current college student working toward a dual Mathematics & Computer Science transfer bachelor’s. My academic focus is heading toward <strong>quantum information</strong>. I believe the world is best understood through mathematics—and that anyone can learn it with the right guidance. If I can help you replace anxiety with curiosity and even excitement, that’s the kind of client relationship I want.</p>
-      <p class="small">I tutor everything up to and including <strong>Calculus I</strong>. Sessions are available <strong>online</strong> or <strong>in-person in Portland, OR</strong>.</p>
+      <p class="small">I’m a current college student working toward a dual Mathematics & Computer Science transfer bachelor’s. My academic focus is heading toward <strong>quantum information</strong>. I believe the world is best understood through mathematics—and that anyone can learn it with the right guidance. If I can help you replace anxiety with curiosity and excitement, that’s the kind of client relationship I want.</p>
+      <p class="small">I tutor from <strong>Algebra I</strong> up through <strong>Precalculus/Trigonometry</strong>, with an emphasis on <strong>preparing for Calculus</strong>. Sessions are available <strong>online</strong> or <strong>in-person in Portland, OR</strong>.</p>
     </section>
 
     <section id="contact" style="margin-top:24px" class="grid cols-2">
@@ -226,10 +258,10 @@
   </footer>
 
   <!-- Thank you popup -->
-  <div id="thankyou" role="dialog" aria-modal="true" aria-labelledby="ty-title" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.65); align-items:center; justify-content:center; z-index:1000;">
-    <div class="box" style="background:#111833; border:1px solid #2b3567; border-radius:16px; padding:2rem; max-width:420px; width:calc(100% - 32px); text-align:center; color:#e6f0ff; box-shadow:0 20px 60px rgba(0,0,0,.4);">
-      <h3 id="ty-title" style="margin:.25rem 0 0">✅ Thank you!</h3>
-      <p style="color:#a9b7d0; margin:.5rem 0 1rem">Your message has been sent. I’ll reply soon.</p>
+  <div id="thankyou" role="dialog" aria-modal="true" aria-labelledby="ty-title" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.45); align-items:center; justify-content:center; z-index:1000;">
+    <div class="box">
+      <h3 id="ty-title">✅ Thank you!</h3>
+      <p>Your message has been sent. I’ll reply soon.</p>
       <button class="btn" id="ty-close" type="button">Close</button>
     </div>
   </div>
@@ -253,7 +285,6 @@
         if (resp.ok) {
           form.reset();
           thankyou.style.display = 'flex';
-          // Optional: auto-close after 4s
           setTimeout(() => { thankyou.style.display = 'none'; }, 4000);
         } else {
           alert("Oops! Something went wrong. Please email me directly: dammonbowen1996@gmail.com");
@@ -263,12 +294,8 @@
       }
     });
 
-    closeBtn.addEventListener('click', () => {
-      thankyou.style.display = 'none';
-    });
-
-    // Close popup when clicking the backdrop
-    thankyou.addEventListener('click', (e) => {
+    closeBtn.addEventListener('click', () => { thankyou.style.display = 'none'; });
+    document.getElementById('thankyou').addEventListener('click', (e) => {
       if (e.target === thankyou) thankyou.style.display = 'none';
     });
   </script>
