@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dammon Bowen — Math Tutor</title>
+  <meta name="description" content="Affordable one‑on‑one math tutoring from Algebra through Precalculus/Trig (and Calc I readiness). Online or in Portland, OR." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dammon Bowen — Math Tutor" />
+  <meta property="og:description" content="Affordable one‑on‑one math tutoring from Algebra through Precalculus/Trig (and Calc I readiness). Online or in Portland, OR." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0f172a/f8fafc&text=Math+Tutoring+with+Dammon" />
+  <meta property="og:url" content="https://your-domain-or-github-pages-url" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Dammon Bowen Math Tutoring",
+    "image":"https://your-domain-or-github-pages-url/og.png",
+    "description":"One‑on‑one math tutoring from Algebra through Precalculus/Trig (and Calc I readiness). Remote or in Portland, OR.",
+    "areaServed":"US",
+    "telephone":"+1-971-297-7434",
+    "email":"dammonbowen1996@gmail.com",
+    "url":"https://your-domain-or-github-pages-url",
+    "sameAs":["https://cal.com/YOUR_USERNAME"],
+    "priceRange":"$",
+    "founder":"Dammon Bowen"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#111833;
+      --ink:#e6f0ff;
+      --muted:#a9b7d0;
+      --accent:#64e6b2;
+      --accent-2:#7aa2ff;
+      --ring: 0 0 0 .125rem color-mix(in oklab, var(--accent) 40%, transparent);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font:16px/1.6 system-ui, sans-serif;
+      color:var(--ink); background: radial-gradient(1200px 600px at 70% -10%, #1b2450 0, transparent 70%), var(--bg);
+      display:flex; flex-direction:column;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; padding:24px; width:100%; margin-inline:auto}
+    header{position:sticky; top:0; backdrop-filter:saturate(1.2) blur(12px); background:#0b1020c0; border-bottom:1px solid #202848}
+    .nav{display:flex; gap:18px; align-items:center; justify-content:space-between}
+    .brand{display:flex; gap:12px; align-items:center}
+    .badge{width:36px; height:36px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#00111a; font-weight:800}
+    .brand h1{font-size:18px; margin:0}
+    .cta{display:flex; gap:10px; align-items:center}
+    .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border-radius:12px; background:var(--accent); color:#02110d; font-weight:700; border:0; box-shadow:0 4px 20px color-mix(in oklab, var(--accent) 25%, transparent); cursor:pointer}
+    .btn.alt{background:#1b2450; color:var(--ink); border:1px solid #2b3567}
+    .btn:focus-visible{outline: none; box-shadow: var(--ring)}
+
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; padding:42px 0}
+    .hero h2{font-size:clamp(28px, 4vw, 44px); line-height:1.15; margin:0 0 10px}
+    .lead{color:var(--muted); margin:0 0 18px}
+    .card{background:linear-gradient(180deg, #121a36, #0d142b); border:1px solid #1f2a59; border-radius:16px; padding:18px}
+    .grid{display:grid; gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2, 1fr)}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+
+    .pill{display:inline-block; padding:.35rem .6rem; border-radius:999px; background:#15214a; color:#cfe0ff; border:1px solid #233067; font-size:.85rem}
+    ul.clean{list-style:none; padding:0; margin:0}
+    ul.clean li{display:flex; gap:.6rem; align-items:flex-start}
+    .dot{width:.66rem; height:.66rem; margin-top:.5rem; border-radius:50%; background:var(--accent)}
+
+    .footer{color:#9fb0d4; border-top:1px solid #1e2751; margin-top:auto}
+    .footer .wrap{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px}
+    .small{font-size:.875rem; color:var(--muted)}
+
+    .section-title{margin:8px 0 6px; font-size:1.1rem; font-weight:800; letter-spacing:.02em; color:#dbe7ff}
+
+    .toast{position:fixed; inset:auto 16px 16px auto; background:#0d142b; border:1px solid #22306a; color:var(--ink); padding:.7rem 1rem; border-radius:12px; opacity:0; transform:translateY(8px); transition:.25s}
+    .toast.show{opacity:1; transform:translateY(0)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand" aria-label="brand">
+        <div class="badge" aria-hidden="true">DB</div>
+        <h1>Dammon Bowen • Math Tutoring</h1>
+      </div>
+      <nav class="cta" aria-label="primary">
+        <a class="btn alt" href="#services">Services</a>
+        <a class="btn alt" href="#subjects">Topics</a>
+        <a class="btn alt" href="#about">About</a>
+        <a class="btn alt" href="#contact">Contact</a>
+        <a class="btn" href="https://cal.com/YOUR_USERNAME" target="_blank" rel="noopener">Book a free chat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h2>One‑on‑one <em>math</em> tutoring from Algebra through Precalculus/Trig.</h2>
+        <p class="lead">No memorizing tricks—just understanding. I offer online sessions anywhere and in‑person tutoring in Portland, OR.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="btn alt" href="#subjects">See topics</a>
+        </div>
+      </div>
+      <div class="card">
+        <span class="pill">Why students pick me</span>
+        <ul class="clean" style="margin-top:10px; display:grid; gap:10px">
+          <li><span class="dot"></span><div><strong>Step‑by‑step guidance</strong> tailored to your course and professor.</div></li>
+          <li><span class="dot"></span><div><strong>Concept‑first teaching</strong> that makes math less scary and more fun.</div></li>
+          <li><span class="dot"></span><div><strong>Flexible</strong>—evening & weekend sessions; Zoom or in‑person.</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="grid cols-3">
+      <article class="card">
+        <div class="section-title">Algebra</div>
+        <div class="small">Linear/quadratic equations, systems, factoring, functions</div>
+      </article>
+      <article class="card">
+        <div class="section-title">Geometry</div>
+        <div class="small">Proofs, circles, polygons, coordinate geometry</div>
+      </article>
+      <article class="card">
+        <div class="section-title">Precalculus</div>
+        <div class="small">Functions, exponentials/logs, sequences, limits intuition</div>
+      </article>
+      <article class="card">
+        <div class="section-title">Trigonometry</div>
+        <div class="small">Unit circle, identities, equations, graphs, applications</div>
+      </article>
+      <article class="card">
+        <div class="section-title">Calc I Readiness</div>
+        <div class="small">Limits, rate of change intuition, derivative basics</div>
+      </article>
+    </section>
+
+    <section id="subjects" style="margin-top:24px" class="grid cols-2">
+      <article class="card">
+        <div class="section-title">Popular topics</div>
+        <ul class="clean" style="margin-top:8px; display:grid; gap:8px">
+          <li><span class="dot"></span><div>Functions (domain/range, transformations, composition)</div></li>
+          <li><span class="dot"></span><div>Trigonometry (unit circle, identities, solving triangles)</div></li>
+          <li><span class="dot"></span><div>Precalculus (logs/exp, sequences/series, vectors & parametrics)</div></li>
+          <li><span class="dot"></span><div>Calc I foundations (limits, slope as rate of change, derivative basics)</div></li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="section-title">Pricing</div>
+        <p class="small">Flat hourly rate; discounts for weekly bundles. First 15‑minute call is free.</p>
+        <p class="small"><em>Online or in‑person (Portland). Ask for current student rate.</em></p>
+      </article>
+    </section>
+
+    <section id="about" style="margin-top:24px" class="card">
+      <div class="section-title">About me</div>
+      <p class="small">I’m a current college student working toward a dual Mathematics & Computer Science transfer bachelor’s. My academic focus is heading toward <strong>quantum information</strong>. I believe the world is best understood through mathematics—and that anyone can learn it with the right guidance. If I can help you replace anxiety with curiosity and even excitement, that’s the kind of client relationship I want.</p>
+      <p class="small">I tutor everything up to and including <strong>Calculus I</strong>. Sessions are available <strong>online</strong> or <strong>in‑person in Portland, OR</strong>.</p>
+    </section>
+
+    <section id="contact" style="margin-top:24px" class="grid cols-2">
+      <form id="contact-form" class="card" method="POST" action="" data-mode="mailto">
+        <div class="section-title">Contact me</div>
+        <p class="small">Tell me what you’re working on. I typically reply same day.</p>
+        <label class="small">Your name<input required name="name" placeholder="Jane Doe" style="display:block; width:100%"></label>
+        <label class="small">Email<input required type="email" name="email" placeholder="you@example.com" style="display:block; width:100%"></label>
+        <label class="small">Message<textarea required name="message" rows="5" placeholder="Course, topics, deadlines…" style="display:block; width:100%"></textarea></label>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:8px">
+          <button class="btn" type="submit">Send</button>
+          <a class="btn alt" href="mailto:dammonbowen1996@gmail.com?subject=Tutoring%20Inquiry">Email instead</a>
+          <a class="btn alt" href="tel:+19712977434">Call/Text</a>
+          <a class="btn alt" href="https://cal.com/YOUR_USERNAME" target="_blank" rel="noopener">Schedule intro</a>
+        </div>
+      </form>
+
+      <aside class="card">
+        <div class="section-title">Quick links</div>
+        <ul class="clean" style="margin-top:8px; display:grid; gap:10px">
+          <li><span class="dot"></span><a href="mailto:dammonbowen1996@gmail.com?subject=Tutoring%20Inquiry">dammonbowen1996@gmail.com</a></li>
+          <li><span class="dot"></span><a href="tel:+19712977434">+1 (971) 297‑7434</a></li>
+          <li><span class="dot"></span><a href="https://cal.com/YOUR_USERNAME" target="_blank" rel="noopener">Book a free intro call</a></li>
+        </ul>
+        <div style="margin-top:12px" class="small">Available: Weeknights & Weekends • Online or In‑Person (Portland, OR)</div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap small">
+      <div>© <span id="y"></span> Dammon Bowen. All rights reserved.</div>
+      <div>Made with a fast, free static site.</div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Message sent. I’ll reply soon.</div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const form = document.getElementById('contact-form');
+    const toast = document.getElementById('toast');
+    form.addEventListener('submit', (e) => {
+      const mode = form.dataset.mode;
+      if (mode === 'mailto' && !form.action) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const subject = encodeURIComponent('Tutoring Inquiry — ' + data.get('name'));
+        const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`);
+        window.location.href = `mailto:dammonbowen1996@gmail.com?subject=${subject}&body=${body}`;
+        toast.classList.add('show');
+        setTimeout(()=>toast.classList.remove('show'), 3500);
+      }
+    });
+  </script>
+</body>
+</html>
